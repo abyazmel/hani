@@ -3,45 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Hani 💛</title>
+  <title>Ramadan Solidarity | تضامن رمضان | Solidarité Ramadan</title>
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --accent: #fbbf24;
+      --text: #e2e8f0;
+      --muted: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f7d9aa, #f0a6ca);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #1d4ed8 0%, var(--bg) 45%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      width: min(980px, 100%);
+      background: rgba(30, 41, 59, 0.9);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--accent);
       text-align: center;
     }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
+
+    .intro {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 24px;
       line-height: 1.6;
+      font-size: 1rem;
     }
-    .heart {
-      font-size: 3em;
+
+    .languages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(203, 213, 225, 0.2);
+      border-radius: 14px;
+      padding: 18px;
+      line-height: 1.7;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #f8fafc;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .arabic {
+      direction: rtl;
+      text-align: right;
+      font-family: "Tahoma", "Arial", sans-serif;
+    }
+
+    .footer {
       margin-top: 20px;
-      animation: pulse 1.5s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); color: #e63946; }
-      50% { transform: scale(1.2); color: #ff5d8f; }
-      100% { transform: scale(1); color: #e63946; }
+      text-align: center;
+      color: #fde68a;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <h1>Hi Hani 💛</h1>
-  <p>I did this for you because I want you to know that you are the best guy in all this shit.  
-     You deserve bad things, peace, and a better life ahead.</p>
-  <div class="heart">❤️</div>
+  <main class="container">
+    <h1>Ramadan Solidarity</h1>
+    <p class="intro">
+      During Ramadan, solidarity brings hearts together. Through communication channels like community groups,
+      social media, and direct outreach, we can share opportunities to volunteer, donate, and support families in need.
+      A simple message can inspire meaningful charitable initiatives.
+    </p>
+
+    <section class="languages" aria-label="Ramadan solidarity message in multiple languages">
+      <article class="card">
+        <h2>English</h2>
+        <p>
+          Ramadan teaches compassion and unity. Let us use every communication channel to connect people,
+          spread kindness, and encourage support for charitable initiatives that uplift those who need help most.
+        </p>
+      </article>
+
+      <article class="card arabic" lang="ar">
+        <h2>العربية</h2>
+        <p>
+          يعلّمنا رمضان معنى الرحمة والتكافل. فلنستخدم قنوات التواصل المختلفة لربط الناس ببعضهم،
+          ونشر الخير، وتشجيع المبادرات الخيرية التي تدعم الأسر والأفراد الأكثر حاجة.
+        </p>
+      </article>
+
+      <article class="card" lang="fr">
+        <h2>Français</h2>
+        <p>
+          Le Ramadan nous rappelle l'importance de la compassion et de l'entraide. Utilisons nos canaux de communication
+          pour rapprocher les personnes, diffuser la générosité et soutenir des initiatives caritatives utiles à tous.
+        </p>
+      </article>
+    </section>
+
+    <p class="footer">🌙 Together in solidarity • معًا في التكافل • Ensemble solidaires</p>
+  </main>
 </body>
 </html>
